@@ -63,7 +63,7 @@ namespace QuantConnect.DataLibrary.Tests
             var destinationFolder = Path.Combine(Globals.DataFolder, "alternative", "estimize");
             var downloader = new EstimizeReleaseDataDownloader(destinationFolder, _mapFileProvider);
 
-            Assert.DoesNotThrow(() => tickers = downloader.GetCompanies().Result);
+            Assert.DoesNotThrow(() => tickers = downloader.GetCompanies());
             Assert.IsTrue(tickers.Count > 0);
         }
 

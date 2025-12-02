@@ -54,6 +54,8 @@ namespace QuantConnect.DataProcessing
             DateTimeZoneHandling = DateTimeZoneHandling.Utc
         };
 
+        protected EstimizeDataDownloader() : this(null) { }
+
         protected EstimizeDataDownloader(IMapFileProvider mapFileProvider)
         {
             _mapFileResolver = mapFileProvider.Get(AuxiliaryDataKey.EquityUsa);
